@@ -1,0 +1,39 @@
+<style>
+    body{
+        background-image: linear-gradient(#66a48d,rgb(12, 46, 12));
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .col-5{
+        padding: 5px;
+        margin: 15px;
+    }
+    .rad{
+        padding: 15px;
+        margin: 25px;
+        justify-content: center;
+        float:inline-end;
+    }
+   
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <% liste5.forEach(coin => { %>
+                    <%- include("partials/product", coin)  %>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <!---  <div id="rad">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+        </div>
+    -->
+    </footer>
+</body>

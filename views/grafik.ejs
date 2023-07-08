@@ -1,0 +1,31 @@
+<style>
+    body{
+        background-image: linear-gradient(#66a48d,rgb(12, 46, 12));
+        font-family: Arial, Helvetica, sans-serif;
+    }
+        .contaier-grafik{
+            
+        display: block;
+    }
+    .card-grafik img{
+        width:30%;
+    }
+    .card-grafik p{
+        font-size: 25px;
+        color:white;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+<body>
+    <% liste3.forEach(e => { %>
+        <div class="container-grafik">
+    <div class="raw">
+        <div class="card-grafik">
+            <div align ="center"><img src="/images/<%= e.image %>" alt=""></div> 
+            <p><%= e.bilgi %> </p>
+    <% }) %>
+        </div>
+    </div>
+</div>
+</body>

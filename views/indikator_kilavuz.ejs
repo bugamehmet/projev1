@@ -1,0 +1,26 @@
+<style>
+        body{
+        background-image: linear-gradient(#66a48d,rgb(12, 46, 12));
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .card-indikk p{
+        text-align: center;
+        color:white;
+        font-size: 25px;
+    }
+    .card-indikk img{
+        width: 40%;
+    }
+</style>
+<body>     
+    <% liste4.forEach(e => { %>
+        <div class="container-indikk">
+    <div class="raw">
+        <div class="card-indikk">
+          <a href="<%= e.lınk %> "> <div align ="center"><img src="/images/<%= e.image %>" alt=""></div> </a>
+            <p><%= e.bilgi %> </p>
+    <% }) %>
+        </div>
+    </div>
+</div>
+</body>
