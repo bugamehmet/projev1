@@ -1,0 +1,69 @@
+<style>
+    .tradingview-widget-container{
+        width: 50%;
+        height: 100%;
+        float:right;
+        margin-right: 350px;  
+        justify-content: center;
+        justify-items: center;
+        
+    }
+    .tradingview-widget-container button{
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 400px;
+      background-color: #66a48d;
+      color: white;
+      border-image: 5px solid black;
+    }
+    .tradingview-widget-container button:hover{
+      background-image: linear-gradient(90deg,#66a48d,#4c7c6c);
+      color: white;
+    }
+    .buttons{
+      display: flex;
+  
+    }
+</style>
+<body>
+ <div class="tradingview-widget-container">
+    <div id="tradingview_22b68"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    
+    "symbol": "BINANCE:BTCUSDT",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "light",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#fff0",
+    "enable_publishing": false,
+    "hide_side_toolbar": false,
+    "allow_symbol_change": true,
+    "container_id": "tradingview_22b68"
+  }
+    );
+    </script>
+    <div id="buttons">
+      <a href="<%= "grafik" %>"><button type="button">Nasıl Kullanılır?</button></a>
+      <a href="<%= "indikator" %>"><button type="button">INDIKATORLER</button></a>
+      <a href="<%= "indikator_kilavuz" %>"><button type="button">NIRVANA ALGORITHM</button></a>
+
+    </div>
+    
+  </div>    
+</body>

@@ -1,0 +1,47 @@
+<style>
+    #container-10{
+                display: block;
+                justify-content: center;
+                align-items: center;
+                background-color: #66a48d;
+                width: 22%;
+                border-radius: 10px;}
+    .card-sol{ 
+        
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                margin: 10px;
+                width: 30px;
+                height: 5px;}
+    .card-sol img{ 
+                margin: 10px;
+                width: 40px;}
+    .card-sol h5{
+                padding-left: 25px;
+                display: flex;
+                width: 15px;
+                box-sizing: inherit;
+                color: black;}
+    .card-sol p{
+                justify-content: center;
+                align-items: center;
+                margin-left: 60px;
+                padding-left: 35px;
+                display: flex;
+                width: 15px;
+                box-sizing: inherit;
+                color: black;}
+</style>
+<div id="container-10">
+<div class="card-sol">
+    <img src="/images/<%= imageUrl %>" alt="" title="<%= aciklamaimg %>">
+    
+    <h5 id="<%= name %>"> <a href="/coin/<%= id %>">
+        <%= name %></a>
+    <p class="card-text"><%= ATH %> </p>
+    <p class="card-text"><%= Tarih %> </p>
+    </h5>
+</div>
+</div>

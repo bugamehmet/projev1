@@ -1,0 +1,50 @@
+<style>  
+            .card{
+               
+                display:flex;
+                border: 5px black;
+                align-items: center;
+                text-align:center;
+                float: left;
+                justify-content: center;
+                padding: 35px;
+                margin: 10px;
+                margin-right: 70px;
+                width: 30px;
+                height: 5px;}
+            .card img{
+                margin: 10px;
+                width: 40px;}
+</style>
+<body>
+    <div class="container">
+        <div class="raw">
+            <div class="card">
+                <a href="/coin/<%= id %>"><img src="/images/<%= imageUrl %>" alt="" title="<%= aciklamaimg %>"></a>
+                <h5><p id="<%= name %>">""</p></h5>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+function YETERRRR(){
+    let lastprice = null;
+        setInterval(function() {
+            const name ="<%= coinname %>";
+            const url = `https://api.binance.com/api/v3/ticker/price?symbol=${name}`
+                    let spe = document.getElementById("<%= name %>");
+                    axios.get(url).then(response => {
+                    let price = parseFloat(response.data.price).toFixed(4);
+                    spe.innerText= price;
+                    if (lastprice==price || !lastprice) {spe.style.color = `black`;}
+                    else if (lastprice<price) {spe.style.color = `green`;}
+                    else  {spe.style.color = `red`;}
+                    lastprice = price;
+                });
+        }, 10000);
+}
+YETERRRR();
+
+    </script>
+</body>
+
